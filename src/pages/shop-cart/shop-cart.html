@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+  <ion-buttons start >
+    <button ion-button icon-only (tap)='dismiss()'>
+      <ion-icon name="close"></ion-icon>关闭
+    </button>
+  </ion-buttons>
+  <ion-buttons end>
+    <button ion-button (tap)='clearCart()'>
+      <ion-icon name="trash"></ion-icon>清空
+    </button>
+  </ion-buttons>
+  <ion-title>购物车</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header>已选商品(左滑会有更多选择哟~)</ion-list-header>
+  <ion-list >
+    <ion-item-sliding *ngFor='let o of orderInfo'>
+      <ion-item  style="margin:0;padding:0;">
+      <ion-row>
+        <ion-col width-20>
+          <img src="assets/img/logo.png" style="width:40px;height:40px;">
+        </ion-col>
+        <ion-col width-40>
+          <p style="width: 50px;line-height: 40px;text-align: center;">{{o.foodInfo.foodName}} ￥{{o.tPrice}}</p>
+        </ion-col>
+        <ion-col width-40 style="text-align: center;height:40px;line-height: 50px;margin-left: 80px;">
+          <ion-icon tappable name="remove-circle" style="color: grey;font-size: 30px;" (tap)='cartRemove(o.foodInfo.foodId)'></ion-icon>
+          <span style="display: inline-block;width: 20px;text-align: center;">
+                {{o.sum}}
+          </span>
+          <ion-icon tappable name="add-circle" style="color: red;font-size: 30px;" (tap)='cartAdd(o.foodInfo.foodId)'></ion-icon>    
+        </ion-col>
+      </ion-row>
+      </ion-item>
+       <ion-item-options>
+          <button ion-button color="danger" icon-left (tap)='delete(o.foodInfo.foodId)'>
+            删除
+          </button>
+          <button ion-button color="primary" icon-left (tap)='remark(o.foodInfo.foodId,o.foodInfo.foodName)'>
+            备注
+          </button>
+        </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-row style="margin: 0:padding:0;border-top: 1px solid #ccc;" >
+    <ion-col><p>总计:</p></ion-col>
+    <ion-col><p>{{navParams.data.tSum}}件</p></ion-col>
+    <ion-col><p>￥{{navParams.data.tPrice}}</p></ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,47 @@
+page-shop-main {
+	h1,h2,h3,h4,h5,h6,span,p,a,.btn,input,select,textarea,div{ font-weight: normal; font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu ;}
+	ul,li{list-style: none;margin:0;padding:0;}
+	.clearMargin{ margin: 0;}
+	.clearPadding{ padding: 0;}
+	.sortlist{
+		
+	}
+	.sortlist >li{
+		border-bottom:1px solid #fff;
+		text-align:left;
+		padding-left:25px;
+		cursor:pointer;
+	}
+	.sortlist li h4{
+		font-size:14px;
+		padding:15px 0;
+		margin:0;
+	}
+	.active{
+		border-left:4px solid #ff7d7c;
+		color:#ff7d7c;
+		background:#fff;
+
+	}
+	.ocart{
+		width:52px;
+		height:52px;
+		line-height:50px;
+		margin:0;
+		padding:0;
+		border:0;
+		cursor:pointer;
+	}
+	.allnum{
+		width:20px;
+		height:20px;
+		background:red;
+		color:#fff;
+		float:right;
+		border-radius:50%;
+		font-size:12px;
+		text-align:center;
+		padding:2px;
+		line-height:16px;
+	}
+}

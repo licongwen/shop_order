@@ -1,0 +1,64 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons>
+			<button ion-button (tap)='goback()'>
+				<ion-icon name="arrow-back"></ion-icon>返回
+			</button>
+		</ion-buttons>
+		<ion-title>订单确认</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-card>
+		<ion-card-header>请填写收货地址:</ion-card-header>
+		<textarea style="width: 100%;height: 90px;">收货地址</textarea>
+	</ion-card>
+	<ion-card>
+		<ion-card-header>已选订单</ion-card-header>
+		<ion-list style="padding:0;">
+			<ion-item *ngFor='let o of orderInfo'>
+				<ion-row>
+					<ion-col width-40 style="margin:0;padding:0;">
+						<img src='assets/img/logo.png' style="width: 50px;height: 50px;">
+					</ion-col>
+					<ion-col width-30 >
+						<p style="width:50px;height:50px;line-height: 50px;text-align: center;">{{o.foodInfo.foodName}}</p>
+					</ion-col>
+					<ion-col width-30>
+						<p style="width:50px;height:50px;line-height: 50px;text-align: center;">￥{{o.tPrice.toFixed(2)}}</p>
+					</ion-col>
+				</ion-row>
+			</ion-item>
+		</ion-list>
+	</ion-card>
+	<ion-card style="padding:0;">
+		<ion-card-header>支付方式:</ion-card-header>
+		<ion-list radio-group>
+			<ion-item>
+				<ion-label>
+					<img src="assets/img/alipay.png" style="width:23px;float: left;margin-right: 10px;"><font>支付宝</font>
+				</ion-label>
+				<ion-radio checked value="alipay"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>
+					<img src="assets/img/wechat.png" style="width:23px;float: left;margin-right:10px;"><font>微信支付</font>
+				</ion-label>
+				<ion-radio value="wechat"></ion-radio>
+			</ion-item>
+		</ion-list>
+	</ion-card>
+</ion-content>
+<ion-footer style="height:55px;width: 100%;border-top: 1px solid #ccc;margin:0;padding:0;">
+	<ion-row>
+		<ion-col width-20>
+			<p>总计: {{params.data.tSum}}件</p>
+		</ion-col>
+		<ion-col width-50>
+			<p>总价:￥{{params.data.tPrice}}</p>
+		</ion-col>
+		<ion-col style="padding:0;margin: 0;" width-30>
+			<button ion-button center color="danger" block style="height: 55px;padding:0;margin: 0;">支付</button>
+		</ion-col>
+	</ion-row>
+</ion-footer>
