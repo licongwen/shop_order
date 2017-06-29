@@ -23,12 +23,17 @@
     （PS：-genkey 产生密钥 -alias demo.keystore 产生的密钥，demo可修改 -keyalg RSA 使用RSA算法对签名加密
 -validity 40000有效期限40000天）
 
-  输入命令后可以得到下面的输入页面：
+  输入命令后可以得到下面的输入页面：按照自己的实际情况填写。随后会在项目的根目录下生成demo.keystore密钥。
+  
   ![image](https://github.com/licongwen/shop_order/blob/master/src/assets/img/pic2.png)
   
    2. 使用步骤1中产生的key对App进行签名:
+   
+   将生成的apk和demo.keystore放在同一文件夹下。在cmd中输入如下的命令：
+   
+   ![image](https://github.com/licongwen/shop_order/blob/master/src/assets/img/pic3.png)
 
-
+（PS：-verbose 输出签名的详细信息 -keystore  demo.keystore 密钥库的位置 -signedjar demor_signed.apk demo.apk.keystore 正式签名，三个参数中依次为签名户产生的文件demo_signed，要签名的文件demo.apk和密钥库demo.keystore。）
 
 
 
