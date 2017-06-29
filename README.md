@@ -16,10 +16,12 @@
 </ul>
 
 <h2>App签名</h2>
-<ol>
-    <li>创建key:需要用到keytool.exe（位于jdk1.6.0——24\jre\bin目录下），使用产生的key对apk签名用到的是jarsigner.exe（位于jdk1.6.0_24\bin目录下）， 把上两个软件所在的目录添加到环境变量path后，打开cmd输入：</li>
-    <li>使用步骤1中产生的key对App进行签名:</li>
-</ol>
+
+   1. 创建key:需要用到keytool.exe（位于jdk1.6.0——24\jre\bin目录下），使用产生的key对apk签名用到的是jarsigner.exe（位于jdk1.6.0_24\bin目录下）， 把上两个软件所在的目录添加到环境变量path后，打开cmd输入：
+    ![image](https://github.com/licongwen/shop_order/blob/master/src/assets/img/pic1.png)
+    
+   2. 使用步骤1中产生的key对App进行签名:
+
 
 
 
