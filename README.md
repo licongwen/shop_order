@@ -1,7 +1,7 @@
 
 利用angular2 and ionic2制作类似外卖点餐的手机App
 
-<h2>怎么运行在电脑端（ionic2自行百度安装运行环境<a href="https://segmentfault.com/a/1190000010194942">运行环境可以参考这篇文章</a>）</h2>
+<h2>怎么运行在电脑端（ionic2自行百度安装运行环境<a target="_blank" href="https://segmentfault.com/a/1190000010194942">运行环境可以参考这篇文章</a>）</h2>
 
 <ul>
   <li>先运行命令git clone  项目地址(git clone https://github.com/licongwen/shop_order.git)  将项目克隆到本地</li>
