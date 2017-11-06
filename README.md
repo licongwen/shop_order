@@ -1,6 +1,6 @@
 
 利用angular2 and ionic2制作类似外卖点餐的手机App
-
+<h2>在线预览<a href="http://www.licongwen.com/shop_order/www/index.html">点我</a></h2>
 <h2>怎么运行在电脑端（ionic2自行百度安装运行环境<a  href="https://segmentfault.com/a/1190000010194942">运行环境可以参考这篇文章</a>）</h2>
 
 <ul>
